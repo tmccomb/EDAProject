@@ -11,6 +11,7 @@
 #    - ansible.eda.external_event_stream:
 #        external_event_stream_id: 83ed46e0-1ae7-40de-934a-d22a0527d538
 
+  sources: []
 
   rules:
     - name: Say Hello
