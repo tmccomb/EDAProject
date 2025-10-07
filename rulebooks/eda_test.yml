@@ -3,10 +3,10 @@
   hosts: all
   sources:
     - name: eda_local_source
-      ansible.eda.generic:
-        payload:
-          - message:
-              name: Fred
+      ansible.eda.webhook:
+        host: 0.0.0.0
+        port: 8555
+
 
 #  sources:
 #    - ansible.eda.external_event_stream:
