@@ -2,10 +2,11 @@
 - name: Listen for events on a webhook
   hosts: all
   sources:
-    - ansible.eda.webhook:
-        host: 0.0.0.0
-        port: 8555
-
+    - name: eda_local_source
+      ansible.eda.generic:
+        payload:
+          - message:
+              name: Fred
 
 #  sources:
 #    - ansible.eda.external_event_stream:
