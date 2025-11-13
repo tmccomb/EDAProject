@@ -15,7 +15,7 @@
 #  sources: []
 
   rules:
-    - name: Say Hello
+    - name: Say Hello one time
       condition: true
       action:
         debug:
