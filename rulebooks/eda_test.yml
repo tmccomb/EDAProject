@@ -19,7 +19,7 @@
       condition: true
       action:
         debug:
-          msg: "{{ event }}"
+          msg: "{{ event.payload }}"
 
     - name: Say Hello
       condition: event.payload.message == "Hello"
