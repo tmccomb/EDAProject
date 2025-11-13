@@ -15,11 +15,6 @@
 #  sources: []
 
   rules:
-    - name: Say Hello one time
-      condition: true
-      action:
-        debug:
-          msg: "{{ event.payload }}"
 
     - name: Say Hello
       condition: event.payload.message == "Hello"
@@ -27,6 +22,12 @@
         run_job_template:
           name: Backup AWX db
           organization: Cloud Hosting
+
+    - name: Say Hello one time
+      condition: true
+      action:
+        debug:
+          msg: "{{ event.payload.message }}"
 
     - name: Didn't hear Hello
       condition: event.payload.message != "Hello"
