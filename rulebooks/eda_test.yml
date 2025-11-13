@@ -20,3 +20,16 @@
       action:
         debug:
           msg: "{{ event }}"
+
+    - name: Say Hello
+      condition: event.payload.message == "Hello"
+      action:
+        run_job_template:
+          name: Backup AWX db
+          organization: Cloud Hosting
+
+    - name: Didn't hear Hello
+      condition: event.payload.message != "Hello"
+      action:
+        debug:
+          msg: "You said, '{{ event.payload.message }}'. Is that what you meant to say?"
