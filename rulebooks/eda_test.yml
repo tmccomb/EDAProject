@@ -20,7 +20,7 @@
       condition: event.payload.message == "Hello"
       action:
         run_job_template:
-          name: Backup AWX db
+          name: backup AWX db
           organization: Cloud Hosting
 
     - name: Say Hello one time
