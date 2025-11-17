@@ -1,6 +1,7 @@
 ---
 - name: Listen for events on a webhook
   hosts: all
+  match_multiple_rules: true
   sources:
     - name: eda_local_source
       ansible.eda.webhook:
